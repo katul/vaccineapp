@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Samadhanam</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+        	function fetchgo() {
+        		// body...
+        		let api = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?"
+        		let data = new URLSearchParams();
+        		let date = document.getElementById("date").value;
+        		let formattedDate;
+        		let div = document.getElementById("result");
+        		let count = 0;
+        		if(date){
+        			let dateItems = date.split("-");
+        			formattedDate = dateItems[2] + "-" + dateItems[1] + "-" + dateItems[0];
+        		}
+        		data.append("pincode",document.getElementById("pincode").value);
+        		data.append("date",formattedDate);
+        		fetch(api+data.toString(), {
+        			method: "get"
+        		})
+        		.then(function(response){
+        			return response.json();
+        		})
+        		.then(function(json){
+        			return json.sessions;
+        		})
+        		.then((sessions)=>{
+        			console.log(sessions.length);
+        			for(let index=0; index < sessions.length ; index++){
+        				//div.innerHTML+='<div class="card col-3"><h4 class="name">'+sessions[index].name+'</h4><p class="address">'+sessions[index].address+'</p></div>'; 
+        				div.innerHTML+="<div class='col-md-4'><div class='card p-3 mb-2'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'><div class='icon'> <i class='bx bxl-mailchimp'></i> </div><div class='ms-2 c-details'><h6 class='mb-0'>"+sessions[index].vaccine+"</h6> <span>Age : "+sessions[index].min_age_limit+"+</span></div></div><div class='badge'> <span>"+sessions[index].fee_type+"</span> </div></div><div class='mt-5'><h3 class='heading'>Dose 1 Slots: "+sessions[index].available_capacity_dose1+"<br>Dose 2 Slots: "+sessions[index].available_capacity_dose2+"</h3><div class='mt-5'> <span class='text1'>"+sessions[index].name+" </span><p class='address'>"+sessions[index].address+"</p> </div></div></div></div>";
+        			}
+        			//console.log(json.sessions);
+        		})
+        		.catch(function(error){
+        			console.log(error);
+        		})
+        		//console.log(data.toString());
+        		return false;
+        	}
+        </script>
+    </head>
+    <body id="page-top" >
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Samadhanam</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            </div>
+        </nav>
+        
+        <div class="container h-100 pt-5">
+                <div class="row h-100 align-items-center justify-content-center text-center">
+                    
+                    <div class="col-lg-8 align-self-baseline pt-5">
+                        <p class="text-white-75 font-weight-light mb-1">Fill in Details to See Vaccination Slot in your Area!</p>
+                        <hr/>
+                        <form id="user-form" onsubmit="return fetchgo()">
+                        	<input type="number" name="pincode" id="pincode"/>
+                        	<input type="date" name="date" id="date"/>
+                        	<input type="submit" value="Go!">
+                        </form>
+                    </div>
+                    
+                    
+                    <div class="container mt-2 mb-3">
+					    <div id="result" class="row">
+					        <div class="col-md-4">
+					            <div class="card p-3 mb-2">
+					                <div class="d-flex justify-content-between">
+					                    <div class="d-flex flex-row align-items-center">
+					                        <div class="icon"> <i class="bx bxl-mailchimp"></i> </div>
+					                        <div class="ms-2 c-details">
+					                            <h6 class="mb-0">Mailchimp</h6> <span>1 days ago</span>
+					                        </div>
+					                    </div>
+					                    <div class="badge"> <span>Design</span> </div>
+					                </div>
+					                <div class="mt-5">
+					                    <h3 class="heading">Senior Product<br>Designer-Singapore</h3>
+					                    <!-- <div class="mt-5">
+					                        <div class="progress">
+					                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+					                        </div>
+					                        <div class="mt-3"> <span class="text1">32 Applied <span class="text2">of 50 capacity</span></span> </div>
+					                    </div> -->
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+
+                </div>
+                
+            </div>
+
+    </body>
+</html>
