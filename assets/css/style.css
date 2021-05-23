@@ -98,6 +98,7 @@ p {
 p.address{
   font-size: 0.75rem;
 }
+
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
@@ -431,7 +432,8 @@ hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #ffffff;
+  color: white;
 }
 
 small,
@@ -4699,7 +4701,12 @@ input[type=button].btn-block {
 a.badge:hover, a.badge:focus {
   text-decoration: none;
 }
-
+.badge.Free {
+    color: Green;
+}
+.badge.Paid {
+    color: Blue;
+}
 .badge:empty {
   display: none;
 }
@@ -10111,7 +10118,7 @@ hr.light {
   }
 }
 #page-top{
-  background: linear-gradient(to bottom, rgb(181 95 33 / 80%) 0%, rgb(156 88 38 / 80%) 100%);
+  background: linear-gradient(to bottom, rgb(32 150 206 / 80%) 0%, rgb(156 88 38 / 80%) 100%);
 }
 header.masthead {
   padding-top: 10rem;
