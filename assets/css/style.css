@@ -4681,6 +4681,14 @@ input[type=button].btn-block {
   border-bottom-right-radius: 0.2rem;
 }
 
+h3.heading.dosered {
+    color: red;
+}
+
+h3.heading.dosegreen {
+    color: green;
+}
+
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
