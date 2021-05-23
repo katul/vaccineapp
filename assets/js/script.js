@@ -3,6 +3,12 @@ $(function() {
     $( "#date" ).datepicker({
         dateFormat:"dd-mm-yy"
     });
+    $("#reset").click(function(){
+        let div = document.getElementById("result");
+        while (div.firstChild) {
+            div.removeChild(div.firstChild);
+        }
+    });
 });
 function fetchgo() {
     // body...
