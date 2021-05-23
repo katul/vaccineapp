@@ -38,8 +38,9 @@ function fetchgo() {
             div.innerHTML+="<div class='col-md-4 center'><div class='card p-3 mb-2'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'>Opps! No Slots available in your area.</div></div></div></div>"
         }else{
             for(let index=0; index < sessions.length; index++){
+                
                 //div.innerHTML+='<div class="card col-3"><h4 class="name">'+sessions[index].name+'</h4><p class="address">'+sessions[index].address+'</p></div>'; 
-                div.innerHTML+="<div class='col-md-4'><div class='card p-3 mb-2'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'><div class='icon'> <i class='bx bxl-mailchimp'></i> </div><div class='ms-2 c-details'><h6 class='mb-0'>"+sessions[index].vaccine+"</h6> <span>Age : "+sessions[index].min_age_limit+"+</span></div></div><div class='badge "+sessions[index].fee_type+"'> <span>"+sessions[index].fee_type+"</span> </div></div><div class='mt-5'><h3 class='heading'>Dose 1 Slots: "+sessions[index].available_capacity_dose1+"<br>Dose 2 Slots: "+sessions[index].available_capacity_dose2+"</h3><div class='mt-5'> <span class='text1'>"+sessions[index].name+" </span><p class='address'>"+sessions[index].address+"</p> </div></div></div></div>";
+                div.innerHTML+="<div class='col-md-4'><div class='card p-3 mb-3'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'><div class='icon'> <i class='bx bxl-mailchimp'></i> </div><div class='ms-2 c-details'><h6 class='mb-0'>"+sessions[index].vaccine+"</h6> <span>Age : "+sessions[index].min_age_limit+"+</span></div></div><div class='badge "+sessions[index].fee_type+"'> <span>"+sessions[index].fee_type+"</span> </div></div><div class='mt-1'><h3 class='heading'>Dose 1 Slots: "+sessions[index].available_capacity_dose1+"<br>Dose 2 Slots: "+sessions[index].available_capacity_dose2+"</h3><div class='mt-2'> <span class='text1'>"+sessions[index].name+" </span><p class='address'>"+sessions[index].address+"</p> </div></div></div></div>";
             }
         }
         //console.log(json.sessions);
