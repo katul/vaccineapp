@@ -95,9 +95,16 @@ input.form-control.btn.btn-width {
   }
 
 }
+@media (min-width: 767px) {
+  div.error.col-md-4 {
+    left:33.33%;
+  }
 
-.address{
+}
 
+.error.card.p-3.mb-2{
+  background-color: #ff7d7d;
+  color: #fff;
 }
 html {
   font-family: sans-serif;
@@ -4761,11 +4768,11 @@ a.badge:hover, a.badge:focus {
   top: -1px;
 }
 
-h3.heading.dosered {
+span.dosered {
     color: red;
 }
 
-h3.heading.dosegreen {
+span.dosegreen {
     color: green;
 }
 
