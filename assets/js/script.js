@@ -4,6 +4,7 @@ $(function() {
         dateFormat:"dd-mm-yy"
     });
     $("#reset").click(function(){
+        
         let div = document.getElementById("result");
         while (div.firstChild) {
             div.removeChild(div.firstChild);
@@ -11,7 +12,12 @@ $(function() {
     });
 });
 function fetchgo() {
-    // body...
+    //analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1T7G7V3JVH');
+    //operation
     let api = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?"
     let data = new URLSearchParams();
     console.log(date);
