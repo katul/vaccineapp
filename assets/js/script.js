@@ -34,7 +34,7 @@ function fetchgo() {
     })
     .then((sessions)=>{
         if(sessions.length==0){
-            div.innerHTML+="<div class='error-block'><div class='col-md-4'><div class='card p-3 mb-2'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'>Opps! No Slots available in your area.</div></div></div></div></div>"
+            div.innerHTML+="<div class='error col-md-4'><div class='card p-3 mb-2'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'><div class='ms-2 c-details'>Opps! No Slots available in your area.</div></div></div></div></div>"
         }else{
             
             
