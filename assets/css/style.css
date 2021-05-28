@@ -51,6 +51,51 @@
   margin-top: 5%;
   margin-bottom: 4%;
 }
+
+@media (max-width: 375px) {
+  input.form-control.input-text {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 426px) {
+  input.form-control.input-text {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 668px) {
+  input.form-control.input-text {
+    margin-bottom: 15px;
+  }
+}
+
+input.form-control.btn.btn-width {
+    max-width: 96px;
+}
+@media (max-width: 375px) {
+  input.form-control.btn.btn-width {
+    margin-top: 15px;
+    max-width: 96px;
+  }
+}
+@media (max-width: 426px) {
+  input.form-control.btn.btn-width {
+    margin-top: 15px;
+    max-width: 96px;
+  }
+}
+@media (max-width: 668px) {
+  input.form-control.btn.btn-width {
+    max-width: 72px;
+  }
+
+}
+@media (max-width: 767px) {
+  input.form-control.btn.btn-width {
+    max-width: 72px;
+  }
+
+}
+
 .address{
 
 }
@@ -4681,14 +4726,6 @@ input[type=button].btn-block {
   border-bottom-right-radius: 0.2rem;
 }
 
-h3.heading.dosered {
-    color: red;
-}
-
-h3.heading.dosegreen {
-    color: green;
-}
-
 .badge {
   display: inline-block;
   padding: 0.25em 0.4em;
@@ -4722,6 +4759,14 @@ a.badge:hover, a.badge:focus {
 .btn .badge {
   position: relative;
   top: -1px;
+}
+
+h3.heading.dosered {
+    color: red;
+}
+
+h3.heading.dosegreen {
+    color: green;
 }
 
 .badge-pill {
