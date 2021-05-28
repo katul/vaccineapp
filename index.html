@@ -19,7 +19,6 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">Samadhanam</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             </div>
         </nav>
         
@@ -31,17 +30,15 @@
                     
                     <form class="pt-5" id="user-form" onsubmit="return fetchgo()">
                         <div class="row">
-                            <div class="col-md-4">
-                            	<input class="form-control" type="text" pattern="\d*" minlength="6" maxlength="6" name="pincode" id="pincode" placeholder="Enter your pincode" required/>
+                            <div class="col-sm-4">
+                            	<input class="form-control input-text" type="text" pattern="\d*" minlength="6" maxlength="6" name="pincode" id="pincode" placeholder="Enter your pincode" required/>
                             </div>
-                            <div class="col-md-4">
-                                <input class="form-control" type="text" name="date" id ="date" placeholder="Select Date"required/>
+                            <div class="col-sm-4">
+                                <input class="form-control input-text" type="text" name="date" id ="date" placeholder="Select Date"required/>
                             </div>
-                            <div class="col-md-2">
-                        	   <input class="form-control btn btn-info" type="submit" value="Go!">
-                            </div>
-                            <div class="col-md-2">
-                               <input class="form-control btn btn-danger" type="reset" value="Reset" id="reset">
+                            <div class="col-sm-4">
+                        	<input class="form-control btn btn-info btn-width" type="submit" value="Go!">
+                                <input class="form-control btn btn-danger btn-width" type="reset" value="Reset" id="reset">
                             </div>
                         </div>
                     </form>
