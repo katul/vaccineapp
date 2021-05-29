@@ -95,7 +95,7 @@ $(function() {
 
     jQuery.validator.addMethod("regCheck", function(value)
             {
-                var regex = /^(?=.*?[1-9])(?=.*?[^\w\s]).{6}$/;
+                var regex = /^[1-9]\d{5}$/;
                 //    // return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
                 //    //     && /[a-z]/.test(value) // has a lowercase letter
                 //    //     && /\d/.test(value) // has a digit
