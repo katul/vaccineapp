@@ -10325,12 +10325,12 @@ form label.error {
 	width: 80%;
 	height:auto;
   padding: 10px;
-	background-color: var(--pink);
-  border: 1px solid var(--pink);
+	background-color: #e51b00;
+  border: 1px solid #e51b00;
 	border-radius: 4px;
-	box-shadow: 0 0 5px var(--pink);
+	box-shadow: 0 0 5px #e51b00;
   margin-top: 8px;
-  font-size: 10px;
+  font-size: 11.8px;
   color : #fff;
 }
 
@@ -10344,6 +10344,6 @@ form label.error:after{
   border: 10px solid transparent;
   border-bottom: 12px solid rgb(193,193,193); /* IE8 Fallback */
   border-bottom: 12px solid rgba(193,193,193,0.5);
-  border-bottom: 15px solid  var(--pink);
+  border-bottom: 15px solid  #e51b00;
   z-index: 1;
 }

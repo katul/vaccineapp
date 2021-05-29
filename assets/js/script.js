@@ -11,7 +11,10 @@ $(function() {
             div.removeChild(div.firstChild);
         }
 
-        console.log(document.getElementsByTagName)
+        let tagElements = document.getElementsByTagName("label");
+        for(let i=0;i<tagElements.length;i++){
+            tagElements[i].style.display = "none";
+        }
     });
      /* Form Validator STARTS */
      $("#user-form").validate({
@@ -96,10 +99,6 @@ $(function() {
     jQuery.validator.addMethod("regCheck", function(value)
             {
                 var regex = /^[1-9]\d{5}$/;
-                //    // return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
-                //    //     && /[a-z]/.test(value) // has a lowercase letter
-                //    //     && /\d/.test(value) // has a digit
-                //    console.log('reg: ' + regex.test(value))
                 return regex.test(value);
             });
 });
