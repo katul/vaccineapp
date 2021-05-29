@@ -10,15 +10,18 @@ $(function() {
         while (div.firstChild) {
             div.removeChild(div.firstChild);
         }
+
+        console.log(document.getElementsByTagName)
     });
      /* Form Validator STARTS */
      $("#user-form").validate({
         rules:{
             pincode : {
                 required :true,
+                regCheck : true,
                 number: true,
                 minlength: 6,
-                maxlength:6
+                maxlength:6                
             },
             date : {
                 required : true
@@ -26,12 +29,13 @@ $(function() {
         },
         messages:{
             pincode : {
-                required :"Please enter valid pincode.",
+                required :"Please enter a valid pincode.",
+                regCheck : "Please enter a valid pincode.",
                 number: "Please enter only numbers.",
                 minlength: "Please enter minimum of 6 digits.",
-                maxlength: "Please enter maximum of 6 digits"
+                maxlength: "Please enter maximum of 6 digits"   
             }
-        },
+        },        
 
         submitHandler: function (form) {
 
@@ -88,5 +92,15 @@ $(function() {
             return false;
         }// SubmitHandler Ends
     });//validate function ends
+
+    jQuery.validator.addMethod("regCheck", function(value)
+            {
+                var regex = /^(?=.*?[1-9])(?=.*?[^\w\s]).{6}$/;
+                //    // return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+                //    //     && /[a-z]/.test(value) // has a lowercase letter
+                //    //     && /\d/.test(value) // has a digit
+                //    console.log('reg: ' + regex.test(value))
+                return regex.test(value);
+            });
 });
 
