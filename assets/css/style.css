@@ -93,15 +93,22 @@ input.form-control.btn.btn-width {
   input.form-control.btn.btn-width {
     max-width: 72px;
   }
-
 }
 @media (min-width: 767px) {
   div.error.col-md-4 {
     left:33.33%;
   }
-
 }
-
+@media (max-width: 992px) {
+  input.form-control.btn.btn-width {
+    max-width: 72px;
+  }
+}
+@media (max-width: 1200px) {
+  input.form-control.btn.btn-width {
+    max-width: 72px;
+  }
+}
 .error.card.p-3.mb-2{
   background-color: #ff7d7d;
   color: #fff;
@@ -112,11 +119,9 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
-
 body {
   margin: 0;
   font-family: "Merriweather", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
