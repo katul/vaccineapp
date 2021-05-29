@@ -66,7 +66,7 @@ $(function() {
             })
             .then((sessions)=>{
                 if(sessions.length==0){
-                    div.innerHTML+="<div class='error col-md-4'><div class='error card p-3 mb-2'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'><div class='ms-2 c-details'>Opps! No Slots available in your area.</div></div></div></div></div>"
+                    div.innerHTML+="<div class='error col-md-4'><div class='error card p-3 mb-2'><div class='d-flex justify-content-center'><div class='d-flex flex-row align-items-center'><div class='ms-2 c-details'>Opps! No Slots available in your area.</div></div></div></div></div>"
                 }else{
                     for(let index=0; index < sessions.length; index++){
                         let dose1 = sessions[index].available_capacity_dose1;
