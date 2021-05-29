@@ -10269,3 +10269,16 @@ a.link-text{
   color: white;
   text-align: center;
 }
+
+
+
+/* For Form Error Message */
+form label.error {
+  background-color: #ff7d7d;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+  padding : 2px 7px;
+  font-style: italic;
+}
