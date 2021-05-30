@@ -10,7 +10,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <link href="assets/css/style.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/excite-bike/jquery-ui.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
         <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
@@ -35,7 +35,7 @@
         <div class="container pt-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-8 align-self-baseline pt-5">
-                    <h3 class="text-white font-weight-light mb-4">Fill in Details to See Vaccination Slot in your Area!</h3>
+                    <h3 class="text-white font-weight-light mb-4">Please enter your pincode and select date to see Vaccination Slot in your Area!</h3>
                     <hr/>
                     
                     <form class="pt-5" id="user-form">
@@ -44,7 +44,7 @@
                             	<input class="form-control input-text" type="text" pattern="\d*" minlength="6" maxlength="6" name="pincode" id="pincode" placeholder="Enter your pincode" required/>
                             </div>
                             <div class="col-sm-4">
-                                <input class="form-control input-text" type="text" name="date" id ="date" placeholder="Select Date" required readonly/>
+                                <input class="form-control input-text" type="text" name="date" id ="date" placeholder="DD-MM-YYYY" required readonly/>
                             </div>
                             <div class="col-sm-4">
                         	   <input class="form-control btn btn-primary btn-width" type="submit" value="Go!">
@@ -54,17 +54,14 @@
                     </form>
                 </div>
                 <div class="container mt-5 mb-3">
-				    <div id="result" class="row expand">
-				        
+				    <div id="result" class="row expand">   
 				    </div>
 				</div>
-
-            </div>
-                
+            </div>      
         </div>
-	<footer class="footer">
+	    <footer class="footer">
           <div class="container">
-            <span class="love">An initiative by <a class="link-text" href="https://www.linkedin.com/in/atul-kumar-80302057/">Atul</a> and <a href="https://www.ambesh.in/website" class="link-text">Ambesh</a></span>
+            <span class="love">An initiative by <a class="link-text" href="https://www.linkedin.com/in/atul-kumar-80302057/">Atul</a> &amp; <a href="https://www.ambesh.in/website" class="link-text">Ambesh</a></span>
           </div>
         </footer>
     </body>

@@ -56,10 +56,16 @@
   input.form-control.input-text {
     margin-bottom: 15px;
   }
+  form label.error{
+    margin-top:-8px;
+  }
 }
 @media (max-width: 426px) {
   input.form-control.input-text {
     margin-bottom: 15px;
+  }
+  form label.error{
+    margin-top:-8px;
   }
 }
 @media (max-width: 668px) {
@@ -2078,7 +2084,7 @@ pre code {
   opacity: 1;
 }
 .form-control:disabled, .form-control[readonly] {
-  background-color: #e9ecef;
+  background-color: #fff;
   opacity: 1;
 }
 
@@ -10333,7 +10339,21 @@ form label.error {
   font-size: 11.8px;
   color : #fff;
 }
-
+@media (max-width: 375px) {
+  form label.error{
+    margin-top:-8px;
+  }
+}
+@media (max-width: 426px) {
+  form label.error{
+    margin-top:-8px;
+  }
+}
+@media (max-width: 668px) {
+  form label.error{
+    margin-top:-6px;
+  }
+}
 form label.error:after{
   content: "";
 	position: absolute;
