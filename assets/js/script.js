@@ -75,17 +75,28 @@ $(function() {
                         let dose1 = sessions[index].available_capacity_dose1;
                         let dose2 = sessions[index].available_capacity_dose2;
                         let dose = "";
+                        let btn = "";
+                        let btnclass = "";
                         if(dose1 == 0){
                             colordose1 = "dosered";
                         }else{
-                            colordose1 = "dosegreen"
+                            colordose1 = "dosegreen";
+                            btnclass="bookbutton";
                         }
                         if(dose2 == 0){
                             colordose2 = "dosered";
                         }else{
-                            colordose2 = "dosegreen"
+                            colordose2 = "dosegreen";
+                            btnclass="bookbutton";
                         }
-                        div.innerHTML+="<div class='dosered col-md-4'><div class='card p-3 mb-3'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'><div class='icon'> <i class='bx bxl-mailchimp'></i> </div><div class='ms-2 c-details'><h6 class='mb-0'>"+sessions[index].vaccine+"</h6> <span>Age : "+sessions[index].min_age_limit+"+</span></div></div><div class='badge "+sessions[index].fee_type+"'> <span>"+sessions[index].fee_type+"</span> </div></div><div class='mt-1'><h3 class='heading'><span class='"+colordose1+"'>Dose 1 Slots: "+sessions[index].available_capacity_dose1+"</span><br><span class='"+colordose2+"'>Dose 2 Slots: "+sessions[index].available_capacity_dose2+"</span></h3><div class='mt-2'> <span class='text1'>"+sessions[index].name+" </span><p class='address'>"+sessions[index].address+"</p> </div></div></div></div>";
+                        if(btnclass.length>0){
+                            let newBtn = document.createElement('button');
+                            newBtn.classList.add('bookbutton');
+                            newBtn.textContent="Book Now";
+                            newBtn.setAttribute("onclick", "openBookingURL()");
+                            btn = newBtn.outerHTML;
+                        }
+                        div.innerHTML+="<div class='dosered col-md-4'><div class='card p-3 mb-3'><div class='d-flex justify-content-between'><div class='d-flex flex-row align-items-center'><div class='icon'> <i class='bx bxl-mailchimp'></i> </div><div class='ms-2 c-details'><h6 class='mb-0 vaccinename'>"+sessions[index].vaccine+"</h6> <span>Age : "+sessions[index].min_age_limit+"+</span></div></div><div class='badge "+sessions[index].fee_type+"'> <span>"+sessions[index].fee_type+"</span> </div></div><div class='mt-1'><h3 class='heading'><span class='"+colordose1+"'>Dose 1 Slots: "+sessions[index].available_capacity_dose1+"</span><span class='pipe' style='display:none'>|</span><br><span class='"+colordose2+"'>Dose 2 Slots: "+sessions[index].available_capacity_dose2+"</span></h3><div class='mt-2'> <span class='text1'>"+sessions[index].name+" </span><p class='address'></p>"+btn+"</div></div></div></div>";
                     }
                 }
             })
@@ -97,9 +108,11 @@ $(function() {
     });//validate function ends
 
     jQuery.validator.addMethod("regCheck", function(value)
-            {
-                var regex = /^[1-9]\d{5}$/;
-                return regex.test(value);
-            });
+    {
+        var regex = /^[1-9]\d{5}$/;
+        return regex.test(value);
+    });
 });
-
+function openBookingURL(){
+    window.open("https://selfregistration.cowin.gov.in");
+}

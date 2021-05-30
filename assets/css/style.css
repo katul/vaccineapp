@@ -77,25 +77,12 @@
 input.form-control.btn.btn-width {
     max-width: 96px;
 }
-@media (max-width: 375px) {
-  input.form-control.btn.btn-width {
-    margin-top: 15px;
-    max-width: 96px;
-  }
-}
-@media (max-width: 426px) {
-  input.form-control.btn.btn-width {
-    margin-top: 15px;
-    max-width: 96px;
-  }
-}
-@media (max-width: 668px) {
+@media (max-width: 1200px) {
   input.form-control.btn.btn-width {
     max-width: 72px;
   }
-
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   input.form-control.btn.btn-width {
     max-width: 72px;
   }
@@ -105,16 +92,41 @@ input.form-control.btn.btn-width {
     left:33.33%;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 767px) {
   input.form-control.btn.btn-width {
     max-width: 72px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 668px) {
   input.form-control.btn.btn-width {
     max-width: 72px;
   }
 }
+@media (max-width: 575px) {
+  input.form-control.btn.btn-width {
+    max-width: 96px;
+  }
+  input.form-control.btn.btn-primary.btn-width{
+    margin-left: 30%;
+  }
+}
+@media (max-width: 426px) {
+  input.form-control.btn.btn-width {
+    margin-top: 15px;
+    max-width: 96px;
+  }
+  input.form-control.btn.btn-primary.btn-width{
+    margin-left: 20%;
+  }
+}
+@media (max-width: 375px) {
+  input.form-control.btn.btn-width {
+    margin-top: 15px;
+    max-width: 96px;
+  }
+
+}
+
 .error.card.p-3.mb-2{
   background-color: #ff7d7d;
   color: #fff;
@@ -4421,7 +4433,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: #d4fbff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -4780,10 +4792,14 @@ a.badge:hover, a.badge:focus {
 
 span.dosered {
     color: red;
+    font-size: 17px;
+    padding-right: 4%;
 }
 
 span.dosegreen {
     color: green;
+    font-size: 17px;
+    padding-right: 4%;
 }
 
 .badge-pill {
@@ -10366,4 +10382,34 @@ form label.error:after{
   border-bottom: 12px solid rgba(193,193,193,0.5);
   border-bottom: 15px solid  #e51b00;
   z-index: 1;
+}
+.bookbutton {
+  display: block;
+  width: auto;
+  height: auto;
+  background: #4E9CAF;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  margin:auto;
+}
+h6.mb-0.vaccinename {
+    font-size: 14px;
+}
+@media (max-width: 767px) {
+  br{
+    display: none;
+  }
+  span.pipe{
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  br{
+    display: none;
+  }
+  span.pipe{
+    display: block;
+  }
 }
