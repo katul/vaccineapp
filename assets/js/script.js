@@ -92,7 +92,7 @@ $(function() {
                         if(btnclass.length>0){
                             let newBtn = document.createElement('button');
                             newBtn.classList.add('bookbutton');
-                            newBtn.textContent="Book Now";
+                            newBtn.textContent="Register Now";
                             newBtn.setAttribute("onclick", "openBookingURL()");
                             btn = newBtn.outerHTML;
                         }
