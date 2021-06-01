@@ -4433,7 +4433,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #d4fbff;
+  background-color: #FBD4C5;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -10144,7 +10144,7 @@ hr.light {
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #f59074;
+  background-color: #FBD4C5;
   transition: background-color 0.2s ease;
 }
 #mainNav .navbar-brand {
@@ -10203,7 +10203,7 @@ hr.light {
   }
 }
 #page-top{
-  background: linear-gradient(to bottom, rgb(32 150 206 / 80%) 0%, rgb(156 88 38 / 80%) 100%);
+  background-color: #131C42
 }
 header.masthead {
   padding-top: 10rem;
